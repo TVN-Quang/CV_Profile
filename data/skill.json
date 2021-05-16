@@ -1,0 +1,28 @@
+{
+    "skills": [
+        {
+            "name": "AngularJS",
+            "val": "50"
+        },
+        {
+            "name": "NodeJS/ExpressJS",
+            "val": "50"
+        },
+        {
+            "name": "MongoDB",
+            "val": "50"
+        },
+        {
+            "name": "HTML/CSS/Javascript",
+            "val": "50"
+        },
+        {
+            "name": "SQL Server",
+            "val": "50"
+        },
+        {
+            "name": "Java",
+            "val": "30"
+        }
+    ]
+}

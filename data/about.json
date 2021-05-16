@@ -1,0 +1,16 @@
+{
+    "about": {
+        "slogan": "There can be no real freedom without the freedom to fail.",
+        "occupation": "Web Developer.",
+        "birthday": "26 Jul 1997",
+        "website": "#",
+        "phone": "0989278624",
+        "city": "Ho Chi Minh, Viet Nam",
+        "email": "tranvonhatquang@gmail.com",
+        "degree": "Fresher",
+        "freelance": "Available",
+        "avatar": "./avatar.jpg",
+        "article": "I have more than a year of experience in web application development. I have been involved in the design and implementation of software systems during the learning and working process. Being sociable, teamwork and eager to learn are all positive aspects of me. I'm a fullstack dev and NodeJS is a programming language that I feel confident in."
+    },
+    "aboutStyle": {}
+}

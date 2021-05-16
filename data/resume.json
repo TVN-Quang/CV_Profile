@@ -1,0 +1,63 @@
+{
+    "summary": {
+        "name": "Tran Vo Nhat Quang",
+        "article": "Web developer with 1+ years of experience designing and developing the web application.",
+        "address": "Ho Chi Minh, Viet Nam",
+        "phone": "0989278624",
+        "email": "tranvonhatquang@gmail.com"
+    },
+    "education": {
+        "university": "FPT University",
+        "major": "Software Engineer",
+        "time": "2015 - 2021",
+        "address": "Lot E2a-7, Road D1 Hi-Tech Park, Long Thanh My Ward, City. Thu Duc, City. Ho Chi Minh",
+        "article": "I learned about programming thinking, teamwork and some subjects related to programming and system development. I was involved in the development of several projects during my studies. "
+    },
+    "exprience": [
+        {
+            "title": "INTERNSHIP",
+            "time": "Dec 2018 - May 2019",
+            "company": "Nguyen Hiep Software",
+            "article": "Directs software design and development Join to some project of the company, code API for mobile and web(admin/client) with NodeJS. At here I have access and work with some technologies such as NodeJS, AngularJS, MongoDB and a few related frameworks. I have done both font-end and back-end developer tasks. I have learned and improved my  I have learned and improved my teamwork skill."
+        },
+        {
+            "title": "STUDYING",
+            "time": "Student",
+            "company": "FPT University",
+            "article": "I learned about JAVA Core and the OOP concepts. I have been involved in developing a few projects using Java J2EE, JSP, Servlet, JDBC, JSTL during the learning process. The database when I work with JAVA I used SQL Server."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Project - Graduation",
+            "company": "Vfarm Company",
+            "responsible": [
+                "Business analysis and database building.",
+                "Write API for production planning feature and a few other functions such as: login, logout, send email, upload file & image, read file pdf, etc.",
+                "Develop the web interface and call the api from the server to get the data and present it to the front-end."
+            ],
+            "decription": [
+                "The manager relies on the plan to import more materials and create production batch. The system will send an email to the staff to weigh the raw materials to be shipped, packaged and finish production process. This includes some features: ",
+                "Warehouse Management",
+                "Planning Management",
+                "Production Management"
+            ]
+        },
+        {
+            "title": "Projects - [STEEL MARKET ASSISTANT, AAC GROUP TRAVEL, Smart Cargo - Legatech, Wexym, Sofory]",
+            "time": "Dec 2018 - May 2019",
+            "company": "Nguyen Hiep Software",
+            "responsible": [
+                "Write API for mobile and web admin.",
+                "Develop the web interface and call the api from the server to get the data and present it to the front-end.",
+                "Write automation test with Selenium."
+            ],
+            "decription": [
+                "Here are a few specific functions: ",
+                "Authorize, authenticate, upload file & image",
+                "Send notifications with firebase",
+                "API CRUD"
+            ]
+        }
+    ]
+}
