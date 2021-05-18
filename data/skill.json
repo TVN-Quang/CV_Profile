@@ -23,6 +23,10 @@
         {
             "name": "Java",
             "val": "30"
+        },
+        {
+            "name": "Github",
+            "val": "50"
         }
     ]
 }

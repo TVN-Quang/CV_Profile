@@ -61,7 +61,7 @@ class About extends React.Component {
                                     <ul>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{this.state.about.birthday}</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{this.state.about.degree}</span></li>
-                                        <li><i className="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>{this.state.about.email}</span></li>
+                                        <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{this.state.about.email}</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>{this.state.about.freelance}</span></li>
                                     </ul>
                                 </div>
