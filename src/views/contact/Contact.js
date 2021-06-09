@@ -1,13 +1,21 @@
 import React from "react"
 class Contact extends React.Component {
-  state = {
-    contact: {
-      fullname: '',
-      email: '',
-      subject: '',
-      message: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      contact: {
+        fullname: '',
+        email: '',
+        subject: '',
+        message: ''
+      },
+      displayLoading: 'none',
+      displayMessage: 'none',
+      displayErr: 'none'
     }
+    this.handleChange = this.handleChange.bind(this);
   }
+
   // async componentDidMount() {
   //   try {
   //     let response = await this.getResumeData()
@@ -21,19 +29,38 @@ class Contact extends React.Component {
   //   }
   // }
 
+  handleChange(event) {
+    let target = event.target
+    let field = target.name
+    this.setState({ contact: {...this.state.contact, [field]: target.value} }, function () {
+      console.log(JSON.stringify(this.state.contact))
+    })
+  }
+
+  handleResponse(response) {
+    if (response.status === 200) {
+      this.setState({displayLoading: 'none', displayMessage: 'inline-block'})
+    } else {
+      throw response.errorMessage || response.statusText
+    }
+  }
+
   async createContact() {
     try {
+      this.setState({displayLoading: 'block'})
       const requestOptions = {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email: 'a@gmail.com' })
+        body: JSON.stringify(this.state.contact)
       };
       let result = await fetch('https://wegdcv77hj.execute-api.ap-southeast-1.amazonaws.com/api/contact', requestOptions)
       let json = await result.json();
+      this.handleResponse(json)
     } catch (error) {
       console.log(error)
+      this.setState({displayLoading: 'none', displayErr: 'block'})
     }
   }
   render() {
@@ -70,24 +97,24 @@ class Contact extends React.Component {
               <form role="form" className="php-email-form">
                 <div className="row">
                   <div className="col-md-6 form-group">
-                    <input type="text" name="name" className="form-control" value={this.state.contact.fullname} id="name" placeholder="Your Name" />
+                    <input type="text" name="fullname" className="form-control" onChange={this.handleChange} value={this.state.contact.fullname} id="name" placeholder="Your Name" />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" className="form-control" name="email" value={this.state.contact.email} id="email" placeholder="Your Email" />
+                    <input type="email" className="form-control" name="email" onChange={this.handleChange} value={this.state.contact.email} id="email" placeholder="Your Email" />
                   </div>
                 </div>
                 <div className="form-group mt-3">
-                  <input type="text" className="form-control" name="subject" value={this.state.contact.subject} id="subject" placeholder="Subject" />
+                  <input type="text" className="form-control" name="subject" onChange={this.handleChange} value={this.state.contact.subject} id="subject" placeholder="Subject" />
                 </div>
                 <div className="form-group mt-3">
-                  <textarea className="form-control" name="message" rows="5" value={this.state.contact.message} placeholder="Message" ></textarea>
+                  <textarea className="form-control" name="message" rows="5" onChange={this.handleChange} value={this.state.contact.message} placeholder="Message" ></textarea>
                 </div>
                 <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">Your message has been sent. Thank you!</div>
+                  <div className="loading" style={{display: this.state.displayLoading}}>Loading</div>
+                  <div className="error-message text-center" style={{display: this.state.displayErr}}>There was an error during execution, sorry for the inconvenience.</div>
+                  <div className="sent-message" style={{display: this.state.displayMessage}}>Your message has been sent. Thank you!</div>
                 </div>
-                <div className="teaddressxt-center"><button type="button" onClick={() => { this.createContact() }}>Send Message</button></div>
+                <div className="address text-center"><button type="button" onClick={() => { this.createContact() }}>Send Message</button></div>
               </form>
             </div>
           </div>
