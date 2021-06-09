@@ -11,7 +11,8 @@ class Contact extends React.Component {
       },
       displayLoading: 'none',
       displayMessage: 'none',
-      displayErr: 'none'
+      displayErr: 'none',
+      errorMessage: ''
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -60,7 +61,7 @@ class Contact extends React.Component {
       this.handleResponse(json)
     } catch (error) {
       console.log(error)
-      this.setState({displayLoading: 'none', displayErr: 'block'})
+      this.setState({displayLoading: 'none', displayErr: 'block', errorMessage: error})
     }
   }
   render() {
@@ -111,7 +112,7 @@ class Contact extends React.Component {
                 </div>
                 <div className="my-3">
                   <div className="loading" style={{display: this.state.displayLoading}}>Loading</div>
-                  <div className="error-message text-center" style={{display: this.state.displayErr}}>There was an error during execution, sorry for the inconvenience.</div>
+                  <div className="error-message text-center" style={{display: this.state.displayErr}}>{this.state.errorMessage}</div>
                   <div className="sent-message" style={{display: this.state.displayMessage}}>Your message has been sent. Thank you!</div>
                 </div>
                 <div className="address text-center"><button type="button" onClick={() => { this.createContact() }}>Send Message</button></div>
