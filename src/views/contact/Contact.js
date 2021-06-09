@@ -33,7 +33,8 @@ class Contact extends React.Component {
       body: JSON.stringify({ email: 'a@gmail.com' })
     };
     let result = await fetch('https://wegdcv77hj.execute-api.ap-southeast-1.amazonaws.com/api/contact', requestOptions)
-    console.log(result)
+    
+    console.log(result.json())
   }
   render() {
     return (
