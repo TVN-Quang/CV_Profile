@@ -97,17 +97,17 @@ class Contact extends React.Component {
               <form role="form" className="php-email-form">
                 <div className="row">
                   <div className="col-md-6 form-group">
-                    <input type="text" name="fullname" className="form-control" onChange={this.handleChange} value={this.state.contact.fullname} id="name" placeholder="Your Name" />
+                    <input type="text" name="fullname" className="form-control" onChange={this.handleChange} value={this.state.contact.fullname} id="name" placeholder="Your Name" required/>
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" className="form-control" name="email" onChange={this.handleChange} value={this.state.contact.email} id="email" placeholder="Your Email" />
+                    <input type="email" className="form-control" name="email" onChange={this.handleChange} value={this.state.contact.email} id="email" placeholder="Your Email" required/>
                   </div>
                 </div>
                 <div className="form-group mt-3">
-                  <input type="text" className="form-control" name="subject" onChange={this.handleChange} value={this.state.contact.subject} id="subject" placeholder="Subject" />
+                  <input type="text" className="form-control" name="subject" onChange={this.handleChange} value={this.state.contact.subject} id="subject" placeholder="Subject" required/>
                 </div>
                 <div className="form-group mt-3">
-                  <textarea className="form-control" name="message" rows="5" onChange={this.handleChange} value={this.state.contact.message} placeholder="Message" ></textarea>
+                  <textarea className="form-control" name="message" rows="5" onChange={this.handleChange} value={this.state.contact.message} placeholder="Message" required></textarea>
                 </div>
                 <div className="my-3">
                   <div className="loading" style={{display: this.state.displayLoading}}>Loading</div>
