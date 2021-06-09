@@ -39,7 +39,7 @@ class Contact extends React.Component {
 
   handleResponse(response) {
     if (response.status === 200) {
-      this.setState({displayLoading: 'none', displayMessage: 'inline-block'})
+      this.setState({displayLoading: 'none', displayMessage: 'block', displayErr: 'none'})
     } else {
       throw response.errorMessage || response.statusText
     }
