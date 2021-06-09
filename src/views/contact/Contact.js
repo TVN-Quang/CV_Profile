@@ -8,33 +8,33 @@ class Contact extends React.Component {
       message: ''
     }
   }
+  // async componentDidMount() {
+  //   try {
+  //     let response = await this.getResumeData()
+  //     let json = await response.json()
+  //     let resume = json
+  //     resume.exprience = this.renderExprience(resume.exprience)
+  //     resume.projects = this.renderProject(resume.projects)
+  //     this.setState({ resume: resume })
+  //   } catch (error) {
 
-
-
-  async componentDidMount() {
-    try {
-      let response = await this.getResumeData()
-      let json = await response.json()
-      let resume = json
-      resume.exprience = this.renderExprience(resume.exprience)
-      resume.projects = this.renderProject(resume.projects)
-      this.setState({ resume: resume })
-    } catch (error) {
-
-    }
-  }
+  //   }
+  // }
 
   async createContact() {
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email: 'a@gmail.com' })
-    };
-    let result = await fetch('https://wegdcv77hj.execute-api.ap-southeast-1.amazonaws.com/api/contact', requestOptions)
-    
-    console.log(result.json())
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: 'a@gmail.com' })
+      };
+      let result = await fetch('https://wegdcv77hj.execute-api.ap-southeast-1.amazonaws.com/api/contact', requestOptions)
+      let json = await result.json();
+    } catch (error) {
+      console.log(error)
+    }
   }
   render() {
     return (
