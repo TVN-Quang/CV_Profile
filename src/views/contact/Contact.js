@@ -56,7 +56,7 @@ class Contact extends React.Component {
         },
         body: JSON.stringify(this.state.contact)
       };
-      let result = await fetch('/api/sendEmail', requestOptions)
+      let result = await fetch('https://vercel-app-quangtran12345.vercel.app/api/sendEmail', requestOptions)
       let json = await result.json();
       this.handleResponse(json)
     } catch (error) {
