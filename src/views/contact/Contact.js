@@ -56,7 +56,7 @@ class Contact extends React.Component {
         },
         body: JSON.stringify(this.state.contact)
       };
-      let result = await fetch('https://wegdcv77hj.execute-api.ap-southeast-1.amazonaws.com/api/contact', requestOptions)
+      let result = await fetch('/api/sendEmail', requestOptions)
       let json = await result.json();
       this.handleResponse(json)
     } catch (error) {
