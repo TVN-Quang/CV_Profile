@@ -24,8 +24,8 @@ class Certification extends React.Component {
                         <p></p>
                     </div>
                     <div className="col-lg-12 text-center">
-                        <img src="./CERTIFICATE_LANDING_PAGE.jpeg" width="1050" height="550"/>
-                        <a className="d-md-block" href="https://coursera.org/share/fb09a2cfaa987ba33dc9a8c97bb813a4">Project Management Principles and Practices Specialization</a>
+                        <img src="./CERTIFICATE_LANDING_PAGE.jpeg" style={{objectFit: "scale-down"}} width="100%"/>
+                        <a className="d-md-block my-3" href="https://coursera.org/share/fb09a2cfaa987ba33dc9a8c97bb813a4">Project Management Principles and Practices Specialization</a>
                     </div>
                 </div>
             </section>
